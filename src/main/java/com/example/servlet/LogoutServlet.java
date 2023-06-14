@@ -11,7 +11,7 @@ import java.io.IOException;
 @WebServlet("/logout")
 public class LogoutServlet extends  HttpServlet {
     @Override
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().removeAttribute("user");
         request.getSession().invalidate();
         response.sendRedirect(request.getContextPath() + "/login.jsp");
