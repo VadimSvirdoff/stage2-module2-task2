@@ -16,7 +16,7 @@ public class AuthFilter implements Filter {
     }
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
-            throws IOException, ServletException {
+            throws IOException, ServletException, NullPointerException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
